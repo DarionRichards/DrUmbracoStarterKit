@@ -1,0 +1,30 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<DrUmbracoStarterKitAssetsFilePath>$(MSBuildThisFileDirectory)..\wwwroot\**\*.*</DrUmbracoStarterKitAssetsFilePath>
+		<DrUmbracoStarterKitViewsFilePath>$(MSBuildThisFileDirectory)..\Views\**\*.*</DrUmbracoStarterKitViewsFilePath>
+	</PropertyGroup>
+
+	<Target Name="CopyDrUmbracoStarterKitAssets" BeforeTargets="Build">
+		<ItemGroup>
+			<CleanAssetFiles Include="$(DrUmbracoStarterKitAssetsFilePath)" />
+		</ItemGroup>
+		<Message Text="Copying Clean Asset files: $(CleanAssetFilesPath) - #@(CleanAssetFiles->Count()) files"  Importance="high" />
+		<Copy
+			SourceFiles="@(CleanAssetFiles)"
+			DestinationFiles="@(CleanAssetFiles->'$(MSBuildProjectDirectory)\wwwroot\%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="true" />
+	</Target>
+
+	<Target Name="CopyDrUmbracoStarterKitViews" BeforeTargets="Build">
+		<ItemGroup>
+			<DrUmbracoStarterKitViewsFiles Include="$(DrUmbracoStarterKitViewsFilePath)" />
+		</ItemGroup>
+		<Message Text="Copying Clean Views files: $(DrUmbracoStarterKitViewsFilesPath) - #@(DrUmbracoStarterKitViewsFiles->Count()) files"  Importance="high" />
+		<Copy
+		  SourceFiles="@(DrUmbracoStarterKitViewsFiles)"
+		  DestinationFiles="@(DrUmbracoStarterKitViewsFiles->'$(MSBuildProjectDirectory)\Views\%(RecursiveDir)%(Filename)%(Extension)')"
+		  SkipUnchangedFiles="true" />
+	</Target>
+
+</Project>

@@ -1,13 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Version>1.0.0</Version>
+    <InformationalVersion>1.0.0</InformationalVersion>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Authors>Darion Richards</Authors>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>DrUmbracoStarterKit.Core</Product>
+    <PackageId>DrUmbracoStarterKit.Core</PackageId>
+    <Title>DrUmbracoStarterKit.Core</Title>
+    <Description>Core Library for the DrUmbracoStarterKit for Umbraco</Description>
+    <PackageTags>umbraco plugin package starter kit Clean core library</PackageTags>
+    <PackageProjectUrl>https://github.com/DarionRichards/DrUmbracoStarterKit</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl>https://github.com/DarionRichards/DrUmbracoStarterKit/blob/master/images/logo.png?raw=true</PackageIconUrl>
+    <RepositoryUrl>https://github.com/DarionRichards/DrUmbracoStarterKit</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms.Web.Website" Version="13.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../images/logo.png" Pack="true" PackPath="\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AssemblyVersion>1.0.0</AssemblyVersion>
+		<Version>1.0.0</Version>
+		<InformationalVersion>1.0.0</InformationalVersion>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Authors>Darion Richards</Authors>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>DrUmbracoStarterKit</Product>
+		<PackageId>DrUmbracoStarterKit</PackageId>
+		<Title>DrUmbracoStarterKit</Title>
+		<Description>DrUmbracoStarterKit for Umbraco</Description>
+		<PackageProjectUrl>https://github.com/DarionRichards/DrUmbracoStarterKit</PackageProjectUrl>
+		<!-- <PackageIcon>logo.png</PackageIcon> -->
+		<PackageIconUrl>https://raw.githubusercontent.com/DarionRichards/DrUmbracoStarterKit/refs/heads/master/images/logo.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/DarionRichards/DrUmbracoStarterKit</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>umbraco;umbraco-marketplace;starter;kit;starterkit</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="build\**\*.*">
+			<Pack>True</Pack>
+			<PackagePath>buildTransitive</PackagePath>
+		</None>
+
+		<Content Include="wwwroot\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+
+		<None Remove="Views\Partials\blockgrid\default.cshtml" />
+
+		<Content Include="Views\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+
+		<None Remove="Migrations\package.xml" />
+
+		<None Remove="Views\Components\Pagination\default.cshtml" />
+		<EmbeddedResource Include="Migrations\package.xml" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="13.2.0" />
+		<PackageReference Include="DrUmbracoStarterKit.Core" Version="1.0.0" />
+	</ItemGroup>
+ 
+	<ItemGroup>
+		<None Include="../README.md" Pack="true" PackPath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Update="Views\Components\Pagination\Default.cshtml">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
