@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms" Version="13.2.0" />
+    <PackageReference Include="bootstrap" Version="5.3.3" />
+    <PackageReference Include="Umbraco.Cms" Version="13.5.2" />
   </ItemGroup>
 
   <ItemGroup>
