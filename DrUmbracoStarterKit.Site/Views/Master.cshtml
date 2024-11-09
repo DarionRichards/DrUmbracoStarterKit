@@ -23,29 +23,43 @@
         <link rel="stylesheet" type="text/css" href="/css/core/core-content.css">
         <link rel="stylesheet" type="text/css" href="/css/core/typography.css">
         <link rel="stylesheet" type="text/css" href="/css/core/navigation.css">
+
+        @* Head Scripts *@
+        <script src="https://kit.fontawesome.com/80b111c971.js" crossorigin="anonymous"></script>
         
     </head>
 
     <body>
         <header>
-            <div class="header-wrapper">
-                <div class="container">
-                    <div class="header-container">
-                        <div>
-                            Icon
-                        </div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a class="nav-link"> Link1</a>
-                                </li>
-                                <li>
-                                    <a  class="nav-link">Link2</a>
-                                </li>
-                            </ul>
-                        </nav>
+            <div class="container-xxl sticky-top">
+                <div class="header-container">
+                    <a href="/" aria-label="Homepage link">
+                        <img src="/assets/img/nav-logo-placeholder-140x70.svg" alt="Example Company Logo"/>
+                    </a>
+                    <nav class="main-nav-wrapper" aria-label="Main navigation">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="#link1">About Us</a>
+                            </li>
+                            <li>
+                                <a  class="nav-link" href="#link2">Work With Us</a>
+                            </li>
+                            <li>
+                                <a  class="nav-link" href="#link3">Shop</a>
+                            </li>
+                            <li>
+                                <a  class="nav-link" href="#link4">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="icon-wrapper">
+                        <span>
+                            <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-user fa-xl"></i>
+                        </span>
                     </div>
-
                 </div>
             </div>
         </header>
@@ -58,7 +72,7 @@
             
         </footer>
 
-        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/scripts/vendor/bootstrap.min.js"></script>
     </body>
 
 </html>

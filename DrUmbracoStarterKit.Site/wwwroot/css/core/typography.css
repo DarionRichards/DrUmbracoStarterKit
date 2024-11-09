@@ -1,4 +1,4 @@
-Typography
+/* Header Elements */
 h1 {
     font-size: 2rem; /* 32px */
     line-height: 2.5rem; /* 40px */
@@ -32,8 +32,20 @@ p {
     font-size: 1rem; /* 16px */
 }
 
+/* Navigation */
+.nav-link {
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    text-transform: uppercase;
+}
+.nav-link:hover {
+    color: #fff;
+    transition: color 0.3s linear;
+}
+
 @media (min-width: 480px) {
-    /* Typography */
+    /* Header Elements */
     h1 {
         font-size: 2.25rem; /* 36px */
         line-height: 2.75rem; /* 44px */
@@ -64,7 +76,7 @@ p {
 }
 
 @media (min-width: 768px) {
-    /* Typography */
+    /* Header Elements */
     h1 {
         font-size: 2.5rem; /* 40px */
         line-height: 3rem; /* 48px */
@@ -95,7 +107,7 @@ p {
 }
 
 @media (min-width: 1024px) {
-    /* Typography */
+    /* Header Elements */
     h1 {
         font-size: 2.75rem; /* 44px */
         line-height: 3.25rem; /* 52px */
@@ -126,7 +138,7 @@ p {
 }
 
 @media (min-width: 1280px) {
-    /* Typography */
+    /* Header Elements */
     h1 {
         font-size: 3rem; /* 48px */
         line-height: 3.75rem; /* 60px */
@@ -157,7 +169,7 @@ p {
 }
 
 @media (min-width: 1536px) {
-    /* Typography */
+    /* Header Elements */
     h1 {
         font-size: 3.25rem; /* 52px */
         line-height: 4rem; /* 64px */

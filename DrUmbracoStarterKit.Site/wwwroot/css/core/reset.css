@@ -3,6 +3,12 @@ body {
     margin: unset;
 }
 
+/* Main Navigation Styles */
+header .main-nav-wrapper ul {
+    list-style-type: none;
+    margin: unset;
+    padding: unset;
+}
 /* Media query template */
 @media (min-width: 480px) {
 }
