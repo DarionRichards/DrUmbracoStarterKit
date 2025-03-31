@@ -3,11 +3,12 @@
     --font-weight-body: normal;
     --letter-spacing-body: 0.1px;
 }
-
 html,
 body {
     font-family: var(--font-style);
     font-weight: var(--font-weight-body);
     letter-spacing: var(--letter-spacing-body);
     line-height: 1.5;
+    width: 100%;
+    overflow-x: hidden;
 }
