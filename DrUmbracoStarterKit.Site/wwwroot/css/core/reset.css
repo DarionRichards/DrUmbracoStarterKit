@@ -1,6 +1,7 @@
 html,
 body {
     margin: unset;
+    font-size: 16px;
 }
 
 /* Main Navigation Styles */
@@ -18,5 +19,5 @@ header .main-nav-wrapper ul {
 }
 @media (min-width: 1280px) {
 }
-@media (min-width: 1536px) {
+@media (min-width: 1440px) {
 }
