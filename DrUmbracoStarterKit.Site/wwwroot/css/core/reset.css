@@ -10,6 +10,10 @@ header .main-nav-wrapper ul {
     margin: unset;
     padding: unset;
 }
+.burger-button {
+    all: unset; /* Removes all default styles */
+}
+
 /* Media query template */
 @media (min-width: 480px) {
 }
